@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   void Function() sethandler;
-  Answer(this.sethandler, {super.key});
+  Answer(this.sethandler);
 
   @override
   Widget build(BuildContext context) {
