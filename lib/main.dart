@@ -4,19 +4,28 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  void answerQuestions() {
-    print('asnwer printed');
-  }
+class MyApp extends StatefulWidget {
+  MyApp({super.key});
 
-  const MyApp({super.key});
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int indexQuestion = 0;
+
+  void answerQuestions() {
+    setState(() {
+      indexQuestion = indexQuestion + 1;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     var questions = [
       'what is your name?',
-      'what is your address?'
-          'what is your pet name?'
+      'what is your address?',
+      'what is your pet name?'
     ];
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -26,7 +35,7 @@ class MyApp extends StatelessWidget {
           ),
           body: Column(
             children: [
-              Text('your questions'),
+              Text(questions[indexQuestion]),
               SizedBox(
                 height: 25,
               ),
