@@ -9,7 +9,7 @@ class Quesiton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15),
-      child: Text(value,style: TextStyle(color: Colors.red),),
+      child: Text(value,style:const TextStyle(color: Colors.red),),
     );
   }
 }
