@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/question.dart';
+import './question.dart';
 
 void main() {
   runApp(MyApp());
@@ -35,7 +37,7 @@ class _MyAppState extends State<MyApp> {
           ),
           body: Column(
             children: [
-              Text(questions[indexQuestion]),
+              Quesiton(questions[indexQuestion]),
               SizedBox(
                 height: 25,
               ),
