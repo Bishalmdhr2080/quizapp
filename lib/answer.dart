@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   void Function() sethandler;
-  Answer(this.sethandler);
+  final String receiveValue;
+  Answer(this.sethandler,this.receiveValue);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class Answer extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           onPressed: sethandler,
-          child: Text('Answer1'),
+          child: Text(receiveValue),
         ),
       ),
     );
