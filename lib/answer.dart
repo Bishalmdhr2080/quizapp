@@ -2,12 +2,10 @@
 
 import 'package:flutter/material.dart';
 
-
 class Answer extends StatelessWidget {
   void Function() sethandler;
   String receiveValue;
-  Answer(this.sethandler,this.receiveValue);
-  
+  Answer(this.sethandler, this.receiveValue);
 
   @override
   Widget build(BuildContext context) {
